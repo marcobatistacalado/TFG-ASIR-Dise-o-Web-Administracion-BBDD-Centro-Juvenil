@@ -1,0 +1,1006 @@
+/*Cosas Generales*/
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  
+}
+
+html, body{
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  width: max-content;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+main {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+}
+
+article {
+
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  margin-bottom: 5vh;
+}
+
+article h2 {
+  margin-top: 5vh;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  background-color: #db1b13;
+  padding-left: 15px;
+}
+
+h2 {
+  font-size: 1em;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+hr {
+  background-color: red;
+  border-style: none;
+  height: 5px;
+  margin: 10px 0px 10px 0px;
+}
+
+nav {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  font-size: 20px;
+  background-color: #db1b13;
+}
+
+#active {
+  visibility: hidden;
+}
+
+.fas {
+  visibility: hidden;
+}
+
+.c_img {
+  background-color: #db1b13;
+  width: 100px;
+  height: 100PX;
+  margin: auto;
+  float: left;
+  
+}
+
+#logosls {
+  align-items: center;
+}
+
+
+.c_menu-horizontal {
+
+  margin: auto;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bolder;
+  background-color: #db1b13;
+  position: relative;
+  top: -13px;
+}
+
+.c_menu-horizontal li{
+  height: auto;
+  width: auto;
+}
+
+.c_menu-horizontal>li>a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+.c_menu-horizontal li a:hover{
+  color:black;
+}
+
+.niveles {
+  position: absolute;
+  display: none;
+  visibility: collapse;
+  width: 10%;
+  height: 10%;
+}
+
+.c_menu-vertical {
+  position: absolute;
+  z-index: 10;
+  display: none;
+  list-style: none;
+  font-size: 20px;
+  font-weight: normal;
+  width: 200px;
+  background-color: rgba(218, 16, 16, 0.5);
+
+}
+
+.c_menu-horizontal li:hover .c_menu-vertical {
+  display: block;
+}
+
+.c_menu-vertical li:hover {
+  background-color: #db1b13;
+}
+
+.c_menu-vertical li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 15px 15px 15px 20px;
+}
+
+/*----------------------------------------------------*/
+
+.c_cont-portada h1 {
+  color: #ffff;
+  font-weight: bolder;
+  font-size: 2em;
+  position: absolute;
+  z-index: 3;
+  top: 17vh
+
+}
+
+#chiqui{
+  background-image: url(./img/chiqui1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+#chiqui h1{
+  color: white;
+}
+
+#preas{
+  background-image: url(./img/masterchef1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+#preas h1{
+  color:white;
+}
+
+#adosjov{
+  background-image: url(./img/parzan3.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+#adosjov h1{
+  color:white;
+}
+
+#catecumenado{
+  background-image: url(./img/catecu1.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+#catecumenado h1{
+  color:white;
+}
+
+.card {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform .4s ease;
+  cursor: pointer;
+}
+
+.cont-videos{
+  width: 100%;
+  height: auto;
+}
+
+.c_cont-portada {
+  margin-top: 10vh;
+  width: 100%;
+  max-height: 600px;
+  height: 100vh;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.c_cont-portada h1{
+  position: absolute;
+  width: auto;
+  height: auto;
+  z-index: 10;
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#item-1:checked~.cards #song-3,
+#item-2:checked~.cards #song-1,
+#item-3:checked~.cards #song-2 {
+  transform: translatex(-40%) scale(.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+#item-1:checked~.cards #song-2,
+#item-2:checked~.cards #song-3,
+#item-3:checked~.cards #song-1 {
+  transform: translatex(40%) scale(.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+#item-1:checked~.cards #song-1,
+#item-2:checked~.cards #song-2,
+#item-3:checked~.cards #song-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+img {
+  box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+}
+
+
+#item-2:checked~.player #test {
+  transform: translateY(0);
+}
+
+#item-2:checked~.player #test {
+  transform: translateY(-40px);
+}
+
+#item-3:checked~.player #test {
+  transform: translateY(-80px);
+}
+
+
+
+
+
+
+
+
+
+
+
+img {
+  box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+}
+
+
+#item-2:checked~.player #test {
+  transform: translateY(0);
+}
+
+#item-2:checked~.player #test {
+  transform: translateY(-40px);
+}
+
+#item-3:checked~.player #test {
+  transform: translateY(-80px);
+}
+
+/*Color secciones*/
+#colorchiqui{
+  background-color: #ffe65d;
+}
+
+#colorpreas{
+  background-color: #ff8000;
+}
+
+#colora2_jov{
+  background-color: #679f5a;
+}
+
+#colorktq{
+  background-color: #503933;
+}
+
+.c_texto {
+  height: 100%;
+  width: 95%;
+  margin: auto;
+  font-size: 20px;
+  padding-top: 10px;
+  text-align: justify;
+}
+
+.c_texto_secciones {
+  max-width: 100%;
+  width: 60;
+  float: left;
+  padding: 20px;
+}
+
+.c_texto ::first-letter {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.c_horadest {
+  max-width: 100%;
+  width: 40%;
+  float: left;
+  padding: 20px;
+}
+
+.c_horadest img {
+  width: 5vw;
+  height: 10vh;
+  float: left;
+}
+
+.c_horadest h4 {
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 20px;
+  text-decoration-color: #db1b13;
+  margin-left: 20px;
+  display: block;
+}
+
+.c_espacio {
+  width: 100%;
+  height: 50px;
+  opacity: 0;
+  display: block;
+
+}
+
+.c_boton {
+  background-color: aliceblue;
+  width: 100%;
+  height: 5vh;
+  display: block;
+  margin: auto;
+  margin-top: 5vh;
+}
+
+/*-------------------------------------------------*/
+
+.c_tarjetas {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c_noticia {
+  width: 100%;
+  overflow: auto;
+  border-color: transparent;
+  border-radius: 10px;
+  box-shadow: 2px 1px 1px 1px;
+  border-color: brown;
+  margin: 2em;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+  height: 50vh;
+}
+
+.c_noticia:hover{
+  background-color: #db1b13;
+  color:white;
+}
+
+.c_noticia:hover h3 a{
+  color:white;
+}
+
+.c_imagen {
+  overflow: hidden;
+  width: 90%;
+  margin: auto;
+  height: 15vh;
+  margin-top: 2vh;
+}
+
+#noticia1 {
+  background-image: url(./img/parzan2.JPG);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  height: 200px;
+}
+
+#noticia2 {
+  background-image: url(./img/cenaconfis.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  height: 200px;
+}
+
+#noticia3 {
+  background-image: url(./img/musical2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  height: 200px;
+}
+
+.c_info {
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.c_info h3 {
+
+  width: 90%;
+  margin: auto;
+}
+
+.c_info h3 a {
+  text-decoration: none;
+  color: red;
+
+}
+
+.c_info p {
+
+  width: 90%;
+  margin: auto;
+}
+
+/*-----------------------------------------------*/
+
+.actividad {
+  width: 90%;
+  border-color: transparent;
+  border-radius: 10px;
+  box-shadow: 2px 1px 1px 1px;
+  margin: 2em;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+.actividad:hover{
+  background-color: #db1b13;
+  color:white;
+}
+
+.actividad:hover h3 a{
+  color:white;
+ }
+ 
+#actividad1 {
+  background-image: url(./img/parzan2.JPG);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  height: 200px;
+}
+
+#a_parzan{
+  background-image: url(./img/parzan2.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+#actividad2 {
+  background-image: url(./img/cenaconfis.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  height: 200px;
+}
+
+#a_cenaconfis{
+  background-image: url(./img/cenaconfis.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+#actividad3 {
+  background-image: url(./img/musical2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  height: 200px;
+}
+
+#a_musical{
+  background-image: url(./img/musical2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+
+/*---------------------------------------------------*/
+
+.RRSS {
+  position: fixed;
+  width: 60px;
+  height: 400px;
+  background-color: #db1b13;
+  right: 0;
+  bottom: 50%;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px 0 0 15px;
+}
+
+.enlaces {
+  height: 100%;
+
+  border-radius: 100%;
+  margin: 15px 0 15px 0;
+  padding: 10px;
+}
+
+.imgrrss {
+  height: auto;
+  mix-blend-mode: luminosity;
+  filter: brightness(100%);
+}
+
+
+#active {
+  display: hidden;
+}
+
+.menu-btn {
+  display: hidden;
+}
+
+.fas fa-bars {
+  display: hidden;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
+
+
+.pie {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  background-color: #db1b13;
+}
+
+.pifoto{
+  width: 40px;
+  height: 40px;
+  box-shadow: 0px 0px 0px 0px;
+}
+#foto1{
+  background-image: url(/main/img/dbosco.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#foto2{
+  background-image: url(/main/img/maux.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.pie img {
+  width: 40px;
+  margin-left: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------tlf------------------------------------------------*/
+
+@media (max-width: 600px) {
+  
+  .RRSS {
+    visibility: hidden;
+  }
+
+  #secciones {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .niveles {
+    visibility: visible;
+  }
+
+  .c_menu-vertical {
+    visibility: hidden;
+  }
+
+  .c_menu-horizontal {
+    margin: auto;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bolder;
+    background-color: #db1b13;
+    position: relative;
+    top: -13px;
+  }
+
+  .wrapper {
+    position: fixed;
+    z-index: 90;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
+    /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+    /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);*/
+    /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+    background: #db1b13;
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 0.3s ease-in-out;
+  }
+
+  #active:checked~.wrapper {
+    clip-path: circle(75%);
+  }
+
+  .menu-btn {
+    position: fixed;
+    z-index: 99;
+    right: 20px;
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+
+    background: #db1b13;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #active:checked~.menu-btn {
+    color: #fff;
+  }
+
+  #active:checked~.menu-btn i:before {
+    content: "\f00d";
+  }
+
+  .wrapper ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    width: max-content;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrapper ul li {
+    margin: 15px 0;
+    width: 100%;
+  }
+
+  .wrapper ul li a {
+    color: none;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 5px 30px;
+    color: #fff;
+    border-radius: 50px;
+    background: #000;
+    position: relative;
+    line-height: 50px;
+    transition: all 0.3s ease;
+  }
+
+  .wrapper ul li a:after {
+    position: absolute;
+    content: "";
+    background: #fff;
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    /*background: linear-gradient(375deg, #1cc7d0, #2ede98);*/
+    width: 104%;
+    height: 110%;
+    left: -2%;
+    top: -5%;
+    /* if the font is 'Oswald'*/
+    border-radius: 50px;
+    transform: scaleY(0);
+    z-index: -1;
+    animation: rotate 1.5s linear infinite;
+    transition: transform 0.3s ease;
+  }
+
+  .wrapper ul li a:hover:after {
+    transform: scaleY(1);
+  }
+
+  .wrapper ul li a:hover {
+    color: #fff;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  .c_img:first-child{
+    margin-top: 10vh;
+  }
+
+  .niveles{
+    margin-top: 30px;
+  }
+  
+  #secciones :first-child{
+    margin-top: -30px;
+  }
+
+  @keyframes rotate {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+
+
+
+  .c_cont-portada {
+    position: relative;
+    z-index: 10;
+    height: 40vh;
+  }
+
+  /*-------------------------------------------------------------------*/
+  .c_tarjetas {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #noticia1 {
+    background-image: url(./img/parzan2.JPG);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    height: 200px;
+  }
+
+  #noticia2 {
+    background-image: url(./img/cenaconfis.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    height: 200px;
+  }
+
+  #noticia3 {
+    background-image: url(./img/musical2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    height: 200px;
+  }
+
+  #actividad1 {
+    background-image: url(./img/parzan2.JPG);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    height: 200px;
+  }
+
+  #actividad2 {
+    background-image: url(./img/cenaconfis.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    height: 200px;
+  }
+
+  #actividad3 {
+    background-image: url(./img/musical2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    height: 200px;
+  }
+
+  .c_cont-portada h1 {
+    position: absolute;
+    width: auto;
+    height: auto;
+    z-index: 10;
+  }
+
+  .pie {
+    height: auto;
+    font-size: 10px;
+  }
+
+  .pie img {
+    visibility: hidden;
+  }
+
+  /*--------------------------------Secciones------------------------------*/
+  .c_informacion {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+  }
+
+  .c_texto_secciones {
+    width: 100%;
+  }
+
+  .c_texto_secciones p {
+    width: 100%;
+    display: block;
+    float: none;
+  }
+
+  .c_horadest {
+    width: 100%;
+    display: block;
+  }
+
+  .c_horadest img {
+    width: auto;
+    height: 5vh;
+  }
+
+  article {
+    overflow: auto;
+  }
+
+  .actividad {
+    overflow: auto;
+    display: block;
+  }
+
+  .c_imagen {
+    overflow: visible;
+    width: 90%;
+    margin: auto;
+    height: 15vh;
+    margin-top: 2vh;
+
+  }
+
+
+}
